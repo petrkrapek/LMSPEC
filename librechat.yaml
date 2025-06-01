@@ -6,11 +6,11 @@ endpoints:
     titleModel: "phi-4"
     groups:
       - group: "phi-4-group"
-        apiKey: "${AZURE_API_KEY}"
+        apiKey: "user_provided"
         instanceName: "pk-4876-resource"
-        version: "2024-08-01-preview"
-        baseURL: "https://pk-4876-resource.services.ai.azure.com"
+        version: "2024-05-01-preview"  # ZMĚNA - podle Azure ukázky
+        baseURL: "https://pk-4876-resource.services.ai.azure.com/models"  # ZMĚNA - podle Azure ukázky
         models:
           phi-4:
             deploymentName: "Phi-4"
-            version: "2024-08-01-preview"
+            version: "2024-05-01-preview"  # ZMĚNA - podle Azure ukázky
