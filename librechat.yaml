@@ -5,7 +5,7 @@ endpoints:
     groups:
       - group: phi4          
         apiKey: ${AZURE_PHI4_KEY}
-        baseURL: https://pk-4876-resource.services.ai.azure.com/models
+        baseURL: ${AZURE_PHI4_BASE_URL}
         serverless: true
         version: 2024-05-01-preview 
         models:
