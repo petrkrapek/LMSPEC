@@ -34,11 +34,12 @@ endpoints:
           - llama3-70b-8192
           - llama3-8b-8192
           - llama2-70b-4096
-          - mixtral-8x7b-32768
-          - gemma-7b-it
+          - gemma2-9b-it
+          - meta-llama/llama-4-maverick-17b-128e-instruct
+          - deepseek-r1-distill-llama-70b
         fetch: false
       titleConvo: true
-      titleModel: mixtral-8x7b-32768
+      titleModel: llama-3.1-8b-instant
       modelDisplayLabel: groq
 
     # Mistral AI
