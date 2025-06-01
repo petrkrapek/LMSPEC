@@ -8,4 +8,4 @@ endpoints:
         serverless: true
         version: "2024-05-01-preview"
         models:
-          phi4-chat: true
+          Phi-4: true
