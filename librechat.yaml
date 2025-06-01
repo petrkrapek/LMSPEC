@@ -1,11 +1,12 @@
-version: 1.2.6
+version: "1.2.6"
+
 endpoints:
   azureOpenAI:
     groups:
-      - group: "phi4"
-        apiKey: "${AZURE_API_KEY}"
-        baseURL: "https://pk-4876-resource.services.ai.azure.com/models"
+      - group: phi4          
+        apiKey: ${AZURE_PHI4_KEY}
+        baseURL: https://pk-4876-resource.services.ai.azure.com/models
         serverless: true
-        version: "2024-05-01-preview"
+        version: 2024-05-01-preview 
         models:
-          Phi-4: true
+          Phi-4: true            
