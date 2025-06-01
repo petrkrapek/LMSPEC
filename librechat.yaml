@@ -1,4 +1,4 @@
-version: 1.1.4
+version: 1.2.6
 cache: true
 endpoints:
   azureOpenAI:
@@ -6,11 +6,11 @@ endpoints:
     titleModel: "phi-4"
     groups:
       - group: "phi-4-group"
-        apiKey: "${AZURE_API_KEY}"
+        apiKey: "user_provided"  # ZMĚNA - místo ${AZURE_API_KEY}
         instanceName: "pk-4876-resource"
-        version: "2024-05-01-preview"
+        version: "2024-08-01-preview"
         baseURL: "https://pk-4876-resource.services.ai.azure.com/api/models"
         models:
           phi-4:
             deploymentName: "Phi-4"
-            version: "2024-05-01-preview"
+            version: "2024-08-01-preview"
