@@ -1,12 +1,32 @@
 version: "1.2.6"
-
+cache: true
 endpoints:
+  # ─────────────────────────────────────────────────────────────
+  # 1) Azure Foundry – Phi-4 (už funguje)
   azureOpenAI:
     groups:
-      - group: phi4          
+      - group: phi4
         apiKey: ${AZURE_PHI4_KEY}
-        baseURL: ${AZURE_PHI4_BASE_URL}
+        baseURL: ${AZURE_PHI4_BASE_URL}          # https://…/models
         serverless: true
-        version: 2024-05-01-preview 
+        version: 2024-05-01-preview
         models:
-          Phi-4: true            
+          Phi-4: true
+
+  # ─────────────────────────────────────────────────────────────
+  # 2) Groq – OpenAI-compatible API
+  custom:
+    groups:
+      - group: groq
+        apiKey: ${GROQ_API_KEY}                  # nastav proměnnou v Railway
+        baseURL: https://api.groq.com/openai/v1  # bez ukončovacího „/“
+        fetch: false                             # (ponecháš-li true, LibreChat načte katalog sám)
+        titleConvo: true                         # automatický název konverzace
+        titleModel: mixtral-8x7b-32768           # model pro generování titulku
+        modelDisplayLabel: groq                  # krátký název v UI
+        models:                                  # které modely povolit v UI
+          llama3-70b-8192:   true
+          llama3-8b-8192:    true
+          llama2-70b-4096:   true
+          mixtral-8x7b-32768: true
+          gemma-7b-it:       true
