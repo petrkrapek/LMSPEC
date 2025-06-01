@@ -1,13 +1,11 @@
 version: 1.2.6
-cache: true
 endpoints:
   azureOpenAI:
-    plugins: true
-    titleModel: "phi-4"
     groups:
-    - group: "phi-4-serverless"
-      apiKey: "user_provided"
-      baseURL: "https://pk-4876-resource.services.ai.azure.com/v1/chat/completions"
-      serverless: true
-      models:
-        phi-4: true
+      - group: "phi4"
+        apiKey: "${AZURE_API_KEY}"
+        baseURL: "https://pk-4876-resource.services.ai.azure.com/models"
+        serverless: true
+        version: "2024-05-01-preview"
+        models:
+          phi4-chat: true
