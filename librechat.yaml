@@ -7,7 +7,7 @@ endpoints:
         apiKey: "${AZURE_API_KEY}"
         instanceName: "pk-4876-resource"
         version: "2024-05-01-preview"
-        baseURL: "https://pk-4876-resource.services.ai.azure.com/models"
+        baseURL: "https://pk-4876-resource.services.ai.azure.com/api/models"
         models:
           phi-4:
             deploymentName: "Phi-4"
