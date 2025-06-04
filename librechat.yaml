@@ -1,5 +1,14 @@
 version: "1.2.6"
 
+webSearch:
+  serperApiKey: "${SERPER_API_KEY}"
+  searchProvider: "serper"
+  firecrawlApiKey: "${FIRECRAWL_API_KEY}"
+  scraperType: "firecrawl"
+  jinaApiKey: "${JINA_API_KEY}"
+  rerankerType: "jina"
+  safeSearch: 1
+
 endpoints:
 
   # ——— 1) Azure Foundry – Phi-4 ———
